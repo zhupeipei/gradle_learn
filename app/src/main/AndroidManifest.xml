@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aire.android.test">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.aire.android.main.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.aire.android.testAct.TestActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.doubleReflect.DoubleReflectActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.io.IOActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.coroutines.CoroutinesActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.layoutinflater.LayoutInflaterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.aspectJ.WebViewTestForAspectJInJavaActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.aspectJ.WebViewTestForAspectJInKotlinActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.aspectJ.AspectJTestActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.lifecycle.LifecycleActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.eventbus.EventBusActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.blockcanary.BlockCanaryActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.aidlconn.AidlConnActivity"
+            android:exported="false" />
+
+        <service
+            android:name="com.aire.android.aidlconn.service.AIDLService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote" />
+
+        <activity
+            android:name="com.aire.android.annotation.AnnotationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.recyclerview.RecyclerViewActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.aire.android.image.MyGlideModule3"
+            android:value="GlideModule" /> <!-- <meta-data android:name="GlideModule" android:value="com.aire.android.image.MyGlideModule3"></meta-data> -->
+        <activity
+            android:name="com.aire.android.image.ImageViewActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.dialog.DialogActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.customview.CustomViewActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.fragment.FragmentActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.aire.android.main.ActivityLifeActivity"
+            android:exported="false" /> <!-- android:theme="@style/MyTransparentTheme" /> -->
+        <!-- android:theme="@android:style/Theme.Translucent" -->
+        <activity
+            android:name="com.aire.android.webview.WebviewActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.aire.android.okhttp.RequestActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".service.ServiceTest"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".service.ServiceBindTestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".service.ServiceTestActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.aire.android.aidl.PhoneInfoActivity"
+            android:exported="true" />
+        <activity android:name="com.aire.android.textureview.TextureViewActivity" />
+        <activity android:name="com.aire.android.main.MainActivity">
+
+            <!-- android:configChanges="orientation|screenSize"> -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
