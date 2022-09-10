@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'java-library'
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+//    compile gradleApi()
+//    groovy localGroovy()
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.21"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
